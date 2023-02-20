@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500&family=Noto+Sans:wght@400;500&family=Playfair+Display:wght@500&family=Poppins:wght@200;300;400;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>flipkart clone</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                    alt="logo">
+            </div>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" id="btn2"  type="submit">Search</button>
+            </form>
+
+            <div class="login">
+                <button>Login</button>
+            </div>
+            <div class="become-seller">Become Seller</div>
+            <div class="more">
+                More
+                <svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="zZ3yfL">
+                    <path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff"
+                        class="_2gTTdy"></path>
+                </svg>
+
+            </div>
+            <a target="_blank"><div class="cart" onclick="openCart()"><i class="fa-solid fa-cart-shopping"></i>
+                <p id="count">0</p>
+            </div></a>
+            <div class="sidebar">
+                <div class="head">
+                    <p>My Cart</p>
+                </div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">0.00</h2>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ************************************************************** -->
+    <hr class="hr">
+    <div class="electro">
+        <h1 class="free">Electronic peripheral</h1>
+        <hr class="hr4">
+        <!-- <div class="left">
+            <a href=""><img src="image/left monitor1.webp" alt="" class="monitor"></a>
+        </div>
+        <hr class="hr1"> -->
+
+        <div class="right">
+            <!-- <h2>Welcome to the electronics world.</h2> -->
+            <!-- <hr class="hr2"> -->
+
+            <div class="small-container">
+                <!-- <h2 class="title">Featured product</h2> -->
+                <div class="row">
+                    <div class="col-4">
+                        <img src="image/img11.jpg" alt="product image">
+                        <h4>Realme Pad </h4>
+                        <div class="ratting">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="prod-price">
+                            <p><span class="striked">Rs 26,899</span> Rs 24,899</p>
+                            <div class="btn-cart">
+                                <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="_1bS9ic"
+                                            d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                            fill="#fff"></path>
+                                    </svg><span class="added" onclick="addtocart(0)">Add to Cart</span></button>
+                            </div>
+                        </div>
+                        <!-- <p><i class="fa-sharp fa-regular fa-indian-rupee-sign"></i>20,000</p> -->
+                    </div>
+                    <div class="col-4">
+                        <img src="image/img8.webp" alt="product image">
+                        <h4>Lenevo Ideapad 3</h4>
+                        <div class="ratting">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="prod-price">
+                            <p><span class="striked">Rs 46,899</span> Rs 44,899</p>
+                            <div class="btn-cart">
+                                <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="_1bS9ic"
+                                            d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                            fill="#fff"></path>
+                                    </svg><span class="added" onclick="addtocart(1)">Add to Cart</span></button>
+                            </div>
+                        </div>
+                        <!-- <p>43,000</p> -->
+                    </div>
+                    <div class="col-4">
+                        <img src="image/img1.webp" alt="product image">
+                        <h4>Canon pixma</h4>
+                        <div class="ratting">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <div class="prod-price">
+                            <p><span class="striked">Rs 27,899</span> Rs 23,899</p>
+                            <div class="btn-cart">
+                                <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="_1bS9ic"
+                                            d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                            fill="#fff"></path>
+                                    </svg><span class="added" onclick="addtocart(2)">Add to Cart</span></button>
+                            </div>
+                        </div>
+                        <!-- <p>23,785</p> -->
+                    </div>
+                    <div class="col-4">
+                        <img src="image/img10.webp" alt="product image">
+                        <h4>Lenevo Intel core3</h4>
+                        <div class="ratting">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <div class="prod-price">
+                            <p><span class="striked">Rs 66,899</span> Rs 62,899</p>
+                            <div class="btn-cart">
+                                <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="_1bS9ic"
+                                            d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                            fill="#fff"></path>
+                                    </svg><span class="added" onclick="addtocart(3)">Add to Cart</span></button>
+                            </div>
+                        </div>
+                        <!-- <p>63,970</p> -->
+                    </div>
+                    <!-- ********************2***************** -->
+
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="image/img2.webp" alt="product image">
+                            <h4>SanDisk Ultra 64</h4>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <div class="prod-price">
+                                <p><span class="striked">Rs 1,999</span> Rs 1,499</p>
+                                <div class="btn-cart">
+                                    <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="_1bS9ic"
+                                                d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                fill="#fff"></path>
+                                        </svg><span class="added" onclick="addtocart(4)">Add to Cart</span></button>
+                                </div>
+                            </div>
+                            <!-- <p>1548</p> -->
+                        </div>
+                        <div class="col-4">
+                            <img src="image/img4.webp" alt="product image">
+                            <h4>SanDisk pendrive</h4>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="prod-price">
+                                <p><span class="striked">Rs 2499</span> Rs 1899</p>
+                                <div class="btn-cart">
+                                    <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="_1bS9ic"
+                                                d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                fill="#fff"></path>
+                                        </svg><span class="added" onclick="addtocart(5)">Add to Cart</span></button>
+                                </div>
+                            </div>
+                            <!-- <p>1914</p> -->
+                        </div>
+                        <div class="col-4">
+                            <img src="image/img3.webp" alt="product image">
+                            <h4>HP Ultra 64</h4>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="prod-price">
+                                <p><span class="striked">Rs 2,299</span> Rs 1,899</p>
+                                <div class="btn-cart">
+                                    <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="_1bS9ic"
+                                                d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                fill="#fff"></path>
+                                        </svg><span class="added" onclick="addtocart(6)">Add to Cart</span></button>
+                                </div>
+                            </div>
+                            <!-- <p>1193</p> -->
+                        </div>
+                        <div class="col-4">
+                            <img src="image/img5.webp" alt="product image">
+                            <h4>Dell mouse</h4>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <div class="prod-price">
+                                <p><span class="striked">Rs 2,699</span> Rs 2,200</p>
+                                <div class="btn-cart">
+                                    <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                            viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="_1bS9ic"
+                                                d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                fill="#fff"></path>
+                                        </svg><span class="added" onclick="addtocart(7)">Add to Cart</span></button>
+                                </div>
+                            </div>
+                            <!-- <p>2359</p> -->
+                        </div>
+
+                        <!-- ************3********************** -->
+                        <hr class="hr">
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="image/img6.webp" alt="product image">
+                                <h4>D-Link DIR-615</h4>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <div class="prod-price">
+                                    <p><span class="striked">Rs 1,899</span> Rs 1,599</p>
+                                    <div class="btn-cart">
+                                        <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="_1bS9ic"
+                                                    d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                    fill="#fff"></path>
+                                            </svg><span class="added" onclick="addtocart(8)">Add to Cart</span></button>
+                                    </div>
+                                </div>
+                                <!-- <p>1693</p> -->
+                            </div>
+                            <div class="col-4">
+                                <img src="image/img13.webp" alt="product image">
+                                <h4>Zook blade mouse</h4>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="prod-price">
+                                    <p><span class="striked">Rs 3,899</span> Rs 3,199</p>
+                                    <div class="btn-cart">
+                                        <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="_1bS9ic"
+                                                    d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                    fill="#fff"></path>
+                                            </svg><span class="added" onclick="addtocart(9)">Add to Cart</span></button>
+                                    </div>
+                                </div>
+                                <!-- <p>3508</p> -->
+                            </div>
+                            <div class="col-4">
+                                <img src="image/img14.webp" alt="product image">
+                                <h4>TP link</h4>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="prod-price">
+                                    <p><span class="striked">Rs 2,699</span> Rs 2,399</p>
+                                    <div class="btn-cart">
+                                        <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="_1bS9ic"
+                                                    d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                    fill="#fff"></path>
+                                            </svg><span class="added" onclick="addtocart(10)">Add to Cart</span></button>
+                                    </div>
+                                </div>
+                                <!-- <p>2500</p> -->
+                            </div>
+                            <div class="col-4">
+                                <img src="image/img12.webp" alt="product image">
+                                <h4>TR-Link DIR-615</h4>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </div>
+                                <div class="prod-price">
+                                    <p><span class="striked">Rs 1,899</span> Rs 1,399</p>
+                                    <div class="btn-cart">
+                                        <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="_1bS9ic"
+                                                    d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                    fill="#fff"></path>
+                                            </svg><span class="added" onclick="addtocart(11)">Add to Cart</span></button>
+                                    </div>
+                                </div>
+                                <!-- <p>1700</p> -->
+                            </div>
+                            <!-- **************4*********** -->
+                            <hr class="hr">
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="image/img15.webp" alt="product image">
+                                    <h4>ASUS Vivobook</h4>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </div>
+                                    <div class="prod-price">
+                                        <p><span class="striked">Rs 46,899</span> Rs 40,899</p>
+                                        <div class="btn-cart">
+                                            <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="_1bS9ic"
+                                                        d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                        fill="#fff"></path>
+                                                </svg><span class="added" onclick="addtocart(12)">Add to Cart</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- <p>35800</p> -->
+                                </div>
+                                <div class="col-4">
+                                    <img src="image/img17.webp" alt="product image">
+                                    <h4>Sandisc pendrive</h4>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="prod-price">
+                                        <p><span class="striked">Rs 899</span> Rs 843</p>
+                                        <div class="btn-cart">
+                                            <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="_1bS9ic"
+                                                        d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                        fill="#fff"></path>
+                                                </svg><span class="added" onclick="addtocart(13)">Add to Cart</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- <p>768</p> -->
+                                </div>
+                                <div class="col-4">
+                                    <img src="image/img18.webp" alt="product image">
+                                    <h4>Charging cabel</h4>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                    <div class="prod-price">
+                                        <p><span class="striked">Rs 2,899</span> Rs 2,299</p>
+                                        <div class="btn-cart">
+                                            <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="_1bS9ic"
+                                                        d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                        fill="#fff"></path>
+                                                </svg><span class="added" onclick="addtocart(14)">Add to Cart</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- <p>2573</p> -->
+                                </div>
+                                <div class="col-4">
+                                    <img src="image/img16.webp" alt="product image">
+                                    <h4>Apple I Pad</h4>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </div>
+                                    <div class="prod-price">
+                                        <p><span class="striked">Rs 76,899</span> Rs 64,899</p>
+                                        <div class="btn-cart">
+                                            <button class="cart-button"> <svg class="V3C5bO" width="14" height="14"
+                                                    viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="_1bS9ic"
+                                                        d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                                        fill="#fff"></path>
+                                                </svg><span class="added" onclick="addtocart(15)">Add to Cart</span></button>
+                                        </div>
+                                    </div>
+                                    <!-- <p>60,000</p> -->
+                                </div>
+                                <!-- ******************************************* -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- **************************************footer**************************** -->
+        <div class="footer">
+            <div class="container4">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="image/play-store.png" alt="">
+                            <img src="image/app-store.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <h3>Useful links</h3>
+                        <ul>
+                            <li>Term</li>
+                            <li>Blog </li>
+                            <li>legal inf</li>
+                            <li>Community</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Twitter</li>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright &copy;2020-truePharma</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
